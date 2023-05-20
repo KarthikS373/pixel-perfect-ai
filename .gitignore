@@ -1,0 +1,43 @@
+# Python-specific ignores
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.pyz
+*.py~
+*.bak
+*.swp
+
+# Cache and temporary files
+.cache/
+*.log
+*.tmp
+*.temp
+
+# Dependency-related ignores
+venv/
+.env
+
+# IDE-based ignores
+.vscode/
+*.code-workspace
+.idea/
+*.iml
+*.iws
+
+# General ignores
+*.DS_Store
+.DS_Store
+**/__pycache__
+examples/
+Thumbs.db
+*.bak
+*.swp
+build
+dist/
+
+# LAMA models
+!lama_cleaner/app/build
+lama_cleaner.egg-info/
