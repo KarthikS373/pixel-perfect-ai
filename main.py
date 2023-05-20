@@ -1,4 +1,4 @@
-from lama_cleaner import entry_point
+from src import entry_point
 
 """
 Entry point for the Pixel Perfect AI
