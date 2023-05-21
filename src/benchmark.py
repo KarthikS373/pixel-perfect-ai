@@ -9,8 +9,8 @@ import nvidia_smi
 import psutil
 import torch
 
-from lama_cleaner.model_manager import ModelManager
-from lama_cleaner.schema import Config, HDStrategy, SDSampler
+from src.model_manager import ModelManager
+from src.schema import Config, HDStrategy, SDSampler
 
 try:
     torch._C._jit_override_can_fuse_on_cpu(False)
