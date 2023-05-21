@@ -5,7 +5,7 @@ from datetime import datetime
 import gradio as gr
 from loguru import logger
 
-from lama_cleaner.const import *
+from src.const import *
 
 _config_file = None
 

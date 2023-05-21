@@ -179,7 +179,7 @@ def parse_args():
     # collect system info to help debug
     dump_environment_info()
     if args.install_plugins_package:
-        from lama_cleaner.installer import install_plugins_package
+        from src.installer import install_plugins_package
 
         install_plugins_package()
         exit()
@@ -189,7 +189,7 @@ def parse_args():
             parser.error(
                 "args.config_installer==True, must set args.installer_config to store config file"
             )
-        from lama_cleaner.web_config import main
+        from src.web_config import main
 
         logger.info("Launching installer web config page")
         main(args.installer_config)

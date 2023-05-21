@@ -8,7 +8,7 @@ import cv2
 from PIL import Image, ImageOps, PngImagePlugin
 import numpy as np
 import torch
-from lama_cleaner.const import MPS_SUPPORT_MODELS
+from src.const import MPS_SUPPORT_MODELS
 from loguru import logger
 from torch.hub import download_url_to_file, get_dir
 import hashlib

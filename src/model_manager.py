@@ -3,21 +3,21 @@ import gc
 
 from loguru import logger
 
-from lama_cleaner.const import SD15_MODELS
-from lama_cleaner.helper import switch_mps_device
-from lama_cleaner.model.controlnet import ControlNet
-from lama_cleaner.model.fcf import FcF
-from lama_cleaner.model.lama import LaMa
-from lama_cleaner.model.ldm import LDM
-from lama_cleaner.model.manga import Manga
-from lama_cleaner.model.mat import MAT
-from lama_cleaner.model.paint_by_example import PaintByExample
-from lama_cleaner.model.instruct_pix2pix import InstructPix2Pix
-from lama_cleaner.model.sd import SD15, SD2, Anything4, RealisticVision14
-from lama_cleaner.model.utils import torch_gc
-from lama_cleaner.model.zits import ZITS
-from lama_cleaner.model.opencv2 import OpenCV2
-from lama_cleaner.schema import Config
+from src.const import SD15_MODELS
+from src.helper import switch_mps_device
+from src.model.controlnet import ControlNet
+from src.model.fcf import FcF
+from src.model.lama import LaMa
+from src.model.ldm import LDM
+from src.model.manga import Manga
+from src.model.mat import MAT
+from src.model.paint_by_example import PaintByExample
+from src.model.instruct_pix2pix import InstructPix2Pix
+from src.model.sd import SD15, SD2, Anything4, RealisticVision14
+from src.model.utils import torch_gc
+from src.model.zits import ZITS
+from src.model.opencv2 import OpenCV2
+from src.schema import Config
 
 models = {
     "lama": LaMa,
@@ -86,7 +86,6 @@ class ModelManager:
         if self.kwargs["sd_controlnet_method"] == control_method:
             return
         if self.model.is_local_sd_model:
-            # is_native_control_inpaint 表示加载了普通 SD 模型
             if (
                 self.model.is_native_control_inpaint
                 and control_method != "control_v11p_sd15_inpaint"

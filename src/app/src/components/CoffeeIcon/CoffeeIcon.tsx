@@ -20,7 +20,7 @@ const CoffeeIcon = () => {
       />
       <Modal
         onClose={() => setShow(false)}
-        title="Buy Me a Coffee"
+        title="Team Netsurfers"
         className="modal-setting"
         show={show}
         showCloseIcon={false}
@@ -31,8 +31,7 @@ const CoffeeIcon = () => {
             flexDirection: 'column',
           }}
         >
-          Hi, if you found my project is useful, please conside buy me a coffee
-          to support my work. Thanks!
+          I hope you all enjoy using the project. 
           <img
             src={CoffeeMachineGif}
             alt="coffee machine"
@@ -52,9 +51,9 @@ const CoffeeIcon = () => {
             gap: '12px',
           }}
         >
-          <Button onClick={() => setShow(false)}> No thanks </Button>
+          <Button onClick={() => setShow(false)}>Cancel</Button>
           <a
-            href="https://ko-fi.com/Z8Z1CZJGY"
+            href=""
             target="_blank"
             rel="noreferrer"
           >
@@ -67,7 +66,7 @@ const CoffeeIcon = () => {
                   gap: '8px',
                 }}
               >
-                Sure
+                More Info
               </div>
             </Button>
           </a>

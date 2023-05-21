@@ -39,5 +39,5 @@ build
 dist/
 
 # LAMA models
-!lama_cleaner/app/build
-lama_cleaner.egg-info/
+!src/app/build
+src.egg-info/
