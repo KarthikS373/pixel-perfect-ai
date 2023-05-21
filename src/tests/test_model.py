@@ -4,8 +4,8 @@ import cv2
 import pytest
 import torch
 
-from lama_cleaner.model_manager import ModelManager
-from lama_cleaner.schema import Config, HDStrategy, LDMSampler, SDSampler
+from src.model_manager import ModelManager
+from src.schema import Config, HDStrategy, LDMSampler, SDSampler
 
 current_dir = Path(__file__).parent.absolute().resolve()
 save_dir = current_dir / "result"
@@ -64,8 +64,6 @@ def assert_equal(
     when the saved images is reloaded, a difference occurs with the original pixel value. 
     If you want to save the original images as it is, save it as PNG or BMP.
     """
-    # gt = cv2.imread(str(current_dir / gt_name), cv2.IMREAD_UNCHANGED)
-    # assert np.array_equal(res, gt)
 
 
 @pytest.mark.parametrize(
@@ -115,8 +113,6 @@ def test_ldm(strategy, ldm_sampler):
 def test_zits(strategy, zits_wireframe):
     model = ModelManager(name="zits", device=device)
     cfg = get_config(strategy, zits_wireframe=zits_wireframe)
-    # os.environ['ZITS_DEBUG_LINE_PATH'] = str(current_dir / 'zits_debug_line.jpg')
-    # os.environ['ZITS_DEBUG_EDGE_PATH'] = str(current_dir / 'zits_debug_edge.jpg')
     assert_equal(
         model,
         cfg,

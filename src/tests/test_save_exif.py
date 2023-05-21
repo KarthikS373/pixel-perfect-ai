@@ -3,7 +3,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from lama_cleaner.helper import pil_to_bytes, load_img
+from src.helper import pil_to_bytes, load_img
 
 current_dir = Path(__file__).parent.absolute().resolve()
 

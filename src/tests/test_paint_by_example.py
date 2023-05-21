@@ -5,9 +5,9 @@ import pytest
 import torch
 from PIL import Image
 
-from lama_cleaner.model_manager import ModelManager
-from lama_cleaner.schema import HDStrategy
-from lama_cleaner.tests.test_model import get_config, get_data
+from src.model_manager import ModelManager
+from src.schema import HDStrategy
+from src.tests.test_model import get_config, get_data
 
 current_dir = Path(__file__).parent.absolute().resolve()
 save_dir = current_dir / 'result'

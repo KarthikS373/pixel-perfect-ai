@@ -3,9 +3,9 @@ from pathlib import Path
 import pytest
 import torch
 
-from lama_cleaner.model_manager import ModelManager
-from lama_cleaner.tests.test_model import get_config, assert_equal
-from lama_cleaner.schema import HDStrategy
+from src.model_manager import ModelManager
+from src.tests.test_model import get_config, assert_equal
+from src.schema import HDStrategy
 
 current_dir = Path(__file__).parent.absolute().resolve()
 save_dir = current_dir / 'result'

@@ -2,7 +2,7 @@ import hashlib
 import os
 import time
 
-from lama_cleaner.plugins.anime_seg import AnimeSeg
+from src.plugins.anime_seg import AnimeSeg
 
 os.environ["PYTORCH_ENABLE_MPS_FALLBACK"] = "1"
 from pathlib import Path
@@ -11,7 +11,7 @@ import cv2
 import pytest
 import torch.cuda
 
-from lama_cleaner.plugins import (
+from src.plugins import (
     RemoveBG,
     RealESRGANUpscaler,
     GFPGANPlugin,

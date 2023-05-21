@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from lama_cleaner.helper import load_img
+from src.helper import load_img
 
 current_dir = Path(__file__).parent.absolute().resolve()
 png_img_p = current_dir / "image.png"
